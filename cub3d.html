@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>cub3D</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="habilidades.html">Habilidades</a>
+        <a href="evaluacion-empresas.html">Mi Empresa Ideal</a>
+        <a href="game.html">Jugar al juego</a>
+    </div>
+
+    <!-- Botón de la hamburguesa -->
+    <span id="menu-btn" class="menu-btn" onclick="openNav()">&#9776;</span>
+
+    <header>
+        <h1>Proyecto cub3D</h1>
+        <p>Motor de raycasting para videojuegos</p>
+    </header>
+
+    <section id="proyecto1">
+      <h2>cub3D</h2>
+  
+      <h4>Descripción</h4>
+      <p>El proyecto cub3d de la Escuela 42 es la implementación de un motor gráfico sencillo que utiliza la biblioteca gráfica miniLibX para renderizar un entorno en perspectiva 3D basado en un formato de archivo de configuración. El proyecto incluye el uso de técnicas de raycasting para simular la perspectiva en primera persona.</p>
+          <h4>Objetivos</h4>
+          <ol>
+            <li>Visualización 3D:<br>&emsp; · Implementar un motor gráfico para visualizar un entorno en perspectiva 3D.</li>
+            <li>Formateo de archivos de configuración:<br>&emsp; · Utilizar un archivo de configuración para definir la disposición del mapa, las texturas, los colores y otros elementos del entorno.</li>
+            <li>Teclado:<br>&emsp; · Permitir al usuario navegar por el entorno utilizando las teclas del teclado.</li>
+            <li>Técnicas de Raycasting:<br>&emsp; · Aplicar técnicas de proyección de rayos para calcular la representación tridimensional de la escena.</li>
+            <li>Detección de paredes:<br>&emsp; · Detectar colisiones con paredes y mostrar la proyección correcta.</li>
+        </ol>
+
+      <a href="https://github.com/tonyvillegas91/42-cursus/tree/master/cub3d" target="_blank">Ver
+          código</a>
+  
+      <div class="gifs-container">
+          <img src="images/cub3d1.gif" alt="GIF 1 del Proyecto FdF">
+          <img src="images/cub3d2.gif" alt="GIF 2 del Proyecto FdF">
+      </div>
+  </section>
+
+  <button id="backToTop" title="Volver arriba">
+    <i class="fas fa-arrow-up">↑</i>
+</button>
+
+<footer>
+  <p>© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
+  <a href="index.html" class="volver-inicio">Volver a la página principal</a>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

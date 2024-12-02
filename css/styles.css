@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color:   
+ #f4f4f9; /* Color de fondo general */
+    line-height: 1.6;
+    background-image: url("ruta/a/tu/textura.svg"); /* Reemplaza con la ruta de tu imagen */
+    background-repeat: repeat; /* Repite la imagen para cubrir el fondo */
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #282c34, #4a4e69); /* Degradado sutil */
+    color: white;
+    padding: 1.5rem; 
+    text-align: center;
+    border-radius: 8px; 
+    max-width: 1400px; 
+    margin: 0 auto; 
+}
+
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+section {
+    background-color: white;
+    padding: 2rem;
+    margin: 1.5rem auto;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    background: linear-gradient(to right, #f0f0f0, #ffffff); /* Degradado de gris claro a blanco */
+    position: relative; /* Para posicionar la superposición */
+}
+
+section::before {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.1); /* Superposición blanca semitransparente */
+}
+
+.parallax {
+    background-attachment: fixed; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Imágenes con filtro */
+img {
+    filter: brightness(1.2) contrast(1.1); 
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    color: #4a4e69;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #282c34;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    margin-top: 2rem;
+}
+.repo {
+    background-color: #fafafa;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+.repo:hover {
+    transform: scale(1.02);
+}
+
+.repo h3 {
+    font-size: 1.5rem;
+    color: #4a4e69;
+}
+
+.repo p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+#habilidades {
+    background-color: #fff;
+    padding: 2rem;
+    margin: 1.5rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#habilidades ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#habilidades li {
+    background-color: #fafafa;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#habilidades li strong {
+    color: #4a4e69;
+    font-size: 1.1rem;
+}
+
+#habilidades li {
+    font-size: 1rem;
+    color: #666;
+}
+
+#empresa-criterios {
+    list-style-type: none;
+    padding: 0;
+}
+
+#empresa-criterios li {
+    background-color: #fafafa;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+#empresa-criterios li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#empresa-criterios li strong {
+    color: #4a4e69;
+    font-size: 1.2rem;
+}
+
+#empresa-criterios li p {
+    color: #666;
+}
+
+/* Barra lateral (sidebar) */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Estilo fijo para el botón de la hamburguesa */
+.menu-btn {
+    position: fixed; /* Fija el botón en la pantalla */
+    top: 10px; /* Ajusta la posición desde la parte superior */
+    left: 10px; /* Ajusta la posición desde el lado izquierdo */
+    z-index: 11; /* Asegura que esté por encima de otros elementos */
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #fff !important; 
+    border: none !important;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-btn:hover {
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+.menu-btn.top {
+    color: white; /* Cambia a blanco para que contraste con el fondo oscuro */
+    transition: color 0.3s ease;
+}
+
+.menu-btn.scrolled {
+    color: #333; /* El color que ya tienes definido para el scroll */
+}
+
+
+/* Cuando se abre la barra lateral, el contenido se mueve a la derecha */
+#contenido.sidebar-open {
+    margin-left: 250px;
+}
+
+/* Estilos de la sección de Línea de Tiempo */
+.timeline-event {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-event h3 {
+    font-size: 1.3rem;
+    color: #4a4e69;
+}
+
+.timeline-event p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Animación de entrada */
+.fade-in {
+    animation: fadeIn 2s ease-in-out;
+    user-select: text;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#sidebar a.active {
+    color: #f4f4f9;
+    background-color: #282c34;
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px; /* Ajusta según el diseño */
+    right: 20px; /* Ajusta según el diseño */
+    width: 50px; /* Tamaño del botón */
+    height: 50px; /* Tamaño del botón */
+    background-color: #282c34; /* Color principal */
+    color: white; /* Color del icono */
+    border: none;
+    border-radius: 50%; /* Botón redondo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    display: none; /* Inicialmente oculto */
+    justify-content: center;
+    align-items: center;
+    font-size: 20px; /* Tamaño del icono o texto */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Transición suave */
+    z-index: 1000; /* Siempre visible */
+}
+
+#backToTop:hover {
+    background-color: #2980b9; /* Cambio de color al pasar el ratón */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+}
+
+nav {
+    position: fixed; /* Hace que la barra sea fija */
+    top: 0; /* Se queda en la parte superior */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Se coloca por encima de otros elementos */
+    background-color: #fff; /* Fondo (puedes personalizarlo) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Agrega sombra para distinguirla */
+    transition: background-color 0.3s ease-in-out; /* Transición suave para el fondo */
+}
+nav.scrolled {
+    background-color: #3498db; /* Cambia el color al hacer scroll */
+    color: white; /* Cambia el color del texto */
+}
+
+.menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001; /* Por encima del nav */
+}
+
+.nav-links {
+    display: none; /* Ocultas inicialmente */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    height: 100%;
+    width: 250px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding-top: 60px; /* Espacio para la barra de navegación */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.nav-links.active {
+    display: flex;
+    transform: translateX(0);
+}
+
+.nav-links li {
+    list-style: none;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+@media screen and (max-width: 768px) {
+    #backToTop {
+        right: 15px; /* Ajusta la posición en pantallas pequeñas */
+        bottom: 15px; /* Ajusta la posición en pantallas pequeñas */
+    }
+}
+
+#proyecto1 {
+    /* Estilos para la sección del proyecto */
+    margin-bottom: 30px; /* Espacio entre secciones */
+  }
+  
+  #proyecto1 h2 {
+    /* Estilos para el título */
+    margin-bottom: 10px; /* Espacio inferior */
+    font-size: 2em; /* Tamaño de fuente */
+  }
+  
+  #proyecto1 h4 {
+    /* Estilos para el subtítulo */
+    margin-bottom: 10px; /* Espacio inferior */
+    font-size: 1.5em; /* Tamaño de fuente */
+  }
+  
+  #proyecto1 img {
+    /* Estilos para el GIF */
+    max-width: 100%; /* Ajusta el GIF al ancho del contenedor */
+    height: auto;
+    margin-bottom: 20px; /* Espacio entre el GIF y el título */
+    border: 1px solid #ddd; /* Añade un borde sutil a las imágenes */
+    border-radius: 5px;
+  }
+  
+  #proyecto1 p {
+    /* Estilos para la descripción */
+    font-family: 'Poppins', sans-serif;/* Fuente monoespaciada */
+  margin-bottom: 20px; /* Espacio entre la descripción y el enlace */
+  font-size: 1.0em; /* Tamaño de fuente */
+  line-height: 1.6; /* Interlineado */
+  }
+  
+  #proyecto1 a {
+    /* Estilos para el enlace */
+    display: inline-block;; /* Para que ocupe todo el ancho */
+    text-align: right; /* Alinea el enlace a la derecha */
+    padding: 5px 10px; /* Espacio interno del enlace */
+    background-color: #4a4e69; /* Color de fondo del enlace */
+    color: white; /* Color del texto del enlace */
+    text-decoration: none; /* Quita el subrayado del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    border: 1px solid #333; /* Borde */
+    transition: background-color 0.3s ease; /* Transición suave para el hover */
+  }
+  
+  #proyecto1 a:hover {
+    /* Estilos para el hover del enlace */
+    background-color: #282c34; /* Color de fondo del enlace al pasar el ratón */
+  }
+  
+  #proyecto1 .gifs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas con el mismo ancho */
+    gap: 30px; /* Espacio entre las imágenes */
+    justify-items: center; /* Centra las imágenes horizontalmente */
+  }
+  
+  #proyecto1 ol {
+    list-style: none; /* Elimina las viñetas de la lista ordenada */
+    counter-reset: objetivo; /* Inicializa el contador */
+  }
+  
+  #proyecto1 li {
+    counter-increment: objetivo; /* Incrementa el contador */
+    margin-bottom: 15px; /* Espacio entre los objetivos (ajustado) */
+  }
+  
+  #proyecto1 li::before {
+    content: counter(objetivo) ". "; /* Añade el número del objetivo */
+    display: inline-block; /* Para poder aplicar margen */
+    margin-right: 10px; /* Espacio entre el número y el texto */
+    font-weight: bold; /* (Opcional) Resalta el número */
+  }
+  
+  #proyecto1 li > span {
+    /* Estilos para los subpuntos */
+    display: block; /* Para que ocupen todo el ancho */
+    margin-left: 50px; /* Sangría para los subpuntos (aumentada) */
+  }
+
+  /* Estilos generales del juego */
+/* Estilos generales del juego */
+#juego {
+    text-align: center;
+}
+
+#snakeCanvas {
+    background-color: #eee;
+    border: 1px solid #000;
+    /* pointer-events: none; */  /* Eliminar o comentar esta línea */
+}
+
+#puntuacion, #record {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#ranking {
+    margin-top: 20px;
+}
+
+#formularioRanking {
+    display: none; /* Ocultar el formulario inicialmente */
+    margin-top: 20px;
+}
+
+/* Estilos para botones */
+.boton {
+    background-color: #4a4e69; /* Color de fondo normal */
+    color: white; /* Color del texto normal */
+    padding: 10px 20px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambiar el cursor al pasar el ratón */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  .boton:hover {
+    background-color: #282c34; /* Color de fondo al pasar el ratón */
+  }
+  
+  /* Estilos para enlaces */
+  a {
+    color: #4a4e69; /* Color del enlace normal */
+    text-decoration: none; /* Sin subrayado */
+    transition: color 0.3s ease; /* Transición suave */
+  }
+  
+  a:hover {
+    color: #151d2e; /* Color del enlace al pasar el ratón */
+  }
+
+  .volver-inicio {
+    /* Estilos para el botón */
+    color: white; /* Color blanco para el texto */
+  }
+  
+  .volver-inicio:hover {
+    color: #6d89c2; /* Color de fondo al pasar el ratón */
+  }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>minishell</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="habilidades.html">Habilidades</a>
+        <a href="evaluacion-empresas.html">Mi Empresa Ideal</a>
+        <a href="game.html">Jugar al juego</a>
+    </div>
+
+    <!-- Botón de la hamburguesa -->
+    <span id="menu-btn" class="menu-btn" onclick="openNav()">&#9776;</span>
+
+    <header>
+        <h1>Proyecto minishell</h1>
+        <p>Versión simplificada de una shell (Bash)</p>
+    </header>
+
+    <section id="proyecto1">
+      <h2>minishell</h2>
+  
+      <h4>Descripción</h4>
+      <p>Minishell es un proyecto básico de shell en la escuela 42, que implementa una interfaz de línea de comandos con soporte para varias funcionalidades de shell.</p>
+          <h4>Objetivos</h4>
+          <ol>
+            <li>Comprender el funcionamiento de una shell:<br>&emsp; · Analizar cómo una shell interpreta comandos, gestiona procesos y interactúa con el sistema operativo.</li>
+            <li>Implementar un intérprete de comandos:<br>&emsp; · Crear un programa que pueda leer, analizar y ejecutar comandos básicos como ls, cd, echo, etc.</li>
+            <li>Gestionar procesos:<br>&emsp; · Aprender a crear, ejecutar y terminar procesos, así como a redirigir la entrada/salida estándar (stdin/stdout) y manejar pipes (|).</li>
+            <li>Familiarizarte con las llamadas al sistema:<br>&emsp; · Utilizar funciones de bajo nivel como fork, execve, wait, pipe, dup, etc. para interactuar con el kernel del sistema operativo.</li>
+            <li>Escribir código robusto y seguro:<br>&emsp; · Prestar atención a la gestión de errores, la prevención de fugas de memoria y la protección contra vulnerabilidades como inyecciones de comandos.</li>
+        </ol>
+
+      <a href="https://github.com/tonyvillegas91/42-cursus/tree/master/minishell" target="_blank">Ver
+          código</a>
+  
+      <div class="gifs-container">
+          <img src="images/minishell1.gif" alt="GIF 1 del Proyecto FdF">
+          <img src="images/minishell2.gif" alt="GIF 2 del Proyecto FdF">
+          <img src="images/minishell3.gif" alt="GIF 3 del Proyecto FdF">
+      </div>
+  </section>
+
+  <button id="backToTop" title="Volver arriba">
+    <i class="fas fa-arrow-up">↑</i>
+</button>
+
+<footer>
+  <p>© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
+  <a href="index.html" class="volver-inicio">Volver a la página principal</a>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

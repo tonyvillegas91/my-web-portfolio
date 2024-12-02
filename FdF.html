@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FdF</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="habilidades.html">Habilidades</a>
+        <a href="evaluacion-empresas.html">Mi Empresa Ideal</a>
+        <a href="game.html">Jugar al juego</a>
+    </div>
+
+    <!-- Botón de la hamburguesa -->
+    <span id="menu-btn" class="menu-btn" onclick="openNav()">&#9776;</span>
+
+    <header>
+        <h1>Proyecto FdF</h1>
+        <p>Programa que visualiza mapas en 3D</p>
+    </header>
+
+    <section id="proyecto1">
+      <h2>FdF</h2>
+  
+      <h4>Descripción</h4>
+      <p>El proyecto FdF de la Escuela 42 es un visor gráfico de mapas en 3D que utiliza la
+          biblioteca gráfica de la escuela, como mlx.
+          El programa lee datos de un archivo que contiene información sobre la altura de los puntos
+          de un mapa y crea una representación visual en 3D utilizando líneas que conectan estos
+          puntos.</p>
+          <h4>Objetivos</h4>
+          <ol>
+            <li>Interfaz gráfica:<br>&emsp; · Crear una interfaz gráfica utilizando la biblioteca gráfica de la escuela (mlx).</li>
+            <li>Lectura de datos:<br>&emsp; · Leer un archivo de datos para obtener información sobre la altura de los puntos del mapa.</li>
+            <li>Proyecciones:<br>&emsp; · Implementar al menos dos proyecciones (isométrica y ortográfica) para visualizar el mapa en 3D.</li>
+            <li>Colores:<br>&emsp; · Asignar colores a las líneas según la altura de los puntos para mejorar la legibilidad visual.</li>
+            <li>Controles de usuario:<br>&emsp; · Permitir la interacción del usuario, como ajustar la altura o rotar los puntos.</li>
+        </ol>
+
+      <a href="https://github.com/tonyvillegas91/42-cursus/tree/master/FdF" target="_blank">Ver
+          código</a>
+  
+      <div class="gifs-container">
+          <img src="images/fdf1.gif" alt="GIF 1 del Proyecto FdF">
+          <img src="images/fdf2.gif" alt="GIF 2 del Proyecto FdF">
+          <img src="images/fdf3.png" alt="GIF 3 del Proyecto FdF">
+          <img src="images/fdf4.png" alt="GIF 4 del Proyecto FdF">
+      </div>
+  </section>
+
+  <button id="backToTop" title="Volver arriba">
+    <i class="fas fa-arrow-up">↑</i>
+</button>
+
+<footer>
+  <p>© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
+  <a href="index.html" class="volver-inicio">Volver a la página principal</a>
+</footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

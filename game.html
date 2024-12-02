@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de la Serpiente</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Inicio</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="habilidades.html">Habilidades</a>
+        <a href="evaluacion-empresas.html">Mi Empresa Ideal</a>
+        <a href="game.html">Jugar al juego</a>
+    </div>
+
+    <span id="menu-btn" class="menu-btn" onclick="openNav()">&#9776;</span>
+
+    <header>
+        <h1>Juego de la Serpiente</h1>
+    </header>
+
+    <section id="juego" class="fade-in">
+        <div id="puntuacion">Puntuación: 0</div>
+        <div id="record">Récord: 0</div>
+        <canvas id="snakeCanvas" width="400" height="400"></canvas>
+        <div id="ranking">
+            <h2>Ranking</h2>
+            <ol id="listaRanking"></ol>
+        </div>
+        <div id="formularioRanking">
+            <h3>Nuevo récord!</h3>
+            <input type="text" id="nombreJugador" maxlength="3" placeholder="AAA">
+            <button onclick="guardarRecord()">Guardar</button>
+        </div>
+    </section>
+
+    <button id="backToTop" title="Volver arriba">
+        <i class="fas fa-arrow-up">↑</i>
+    </button>
+
+    <footer>
+        <p>© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
+        <a href="index.html" class="volver-inicio">Volver a la página principal</a>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
