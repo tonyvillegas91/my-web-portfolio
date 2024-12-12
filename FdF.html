@@ -7,43 +7,46 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Inicio</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="habilidades.html">Habilidades</a>
-        <a href="evaluacion-empresas.html">Mi Empresa Ideal</a>
-        <a href="game.html">Jugar al juego</a>
-    </div>
+  <div id="sidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html" id="inicio_boton">Inicio</a>
+    <a href="proyectos.html" id="proyectos_boton">Proyectos</a>
+    <a href="habilidades.html" id="habilidades_boton">Habilidades</a>
+    <a href="evaluacion_empresas.html" id="empresa_boton">Mi Empresa Ideal</a>
+    <a href="game.html" id="juego_boton">Jugar un juego</a>
+</div>
 
     <!-- Botón de la hamburguesa -->
     <span id="menu-btn" class="menu-btn" onclick="openNav()">&#9776;</span>
 
     <header>
-        <h1>Proyecto FdF</h1>
-        <p>Programa que visualiza mapas en 3D</p>
+      <div class="botones-idioma"> 
+        <button onclick="cambiarIdioma('es')">ES</button>
+        <button onclick="cambiarIdioma('en')">EN</button>
+     </div>
+        <h1 id="titulo_fdf">Proyecto FdF</h1>
+        <p id="descripcion">Programa que visualiza mapas en 3D</p>
     </header>
 
     <section id="proyecto1">
       <h2>FdF</h2>
   
-      <h4>Descripción</h4>
-      <p>El proyecto FdF de la Escuela 42 es un visor gráfico de mapas en 3D que utiliza la
+      <h4 id="titulo_descripcion">Descripción</h4>
+      <p id="descripcion_42">El proyecto FdF de la Escuela 42 es un visor gráfico de mapas en 3D que utiliza la
           biblioteca gráfica de la escuela, como mlx.
           El programa lee datos de un archivo que contiene información sobre la altura de los puntos
           de un mapa y crea una representación visual en 3D utilizando líneas que conectan estos
           puntos.</p>
-          <h4>Objetivos</h4>
+          <h4 id="objetivos">Objetivos</h4>
           <ol>
-            <li>Interfaz gráfica:<br>&emsp; · Crear una interfaz gráfica utilizando la biblioteca gráfica de la escuela (mlx).</li>
-            <li>Lectura de datos:<br>&emsp; · Leer un archivo de datos para obtener información sobre la altura de los puntos del mapa.</li>
-            <li>Proyecciones:<br>&emsp; · Implementar al menos dos proyecciones (isométrica y ortográfica) para visualizar el mapa en 3D.</li>
-            <li>Colores:<br>&emsp; · Asignar colores a las líneas según la altura de los puntos para mejorar la legibilidad visual.</li>
-            <li>Controles de usuario:<br>&emsp; · Permitir la interacción del usuario, como ajustar la altura o rotar los puntos.</li>
+            <li id="interfaz">Interfaz gráfica:<br>&emsp; · Crear una interfaz gráfica utilizando la biblioteca gráfica de la escuela (mlx).</li>
+            <li id="lectura">Lectura de datos:<br>&emsp; · Leer un archivo de datos para obtener información sobre la altura de los puntos del mapa.</li>
+            <li id="proyecciones">Proyecciones:<br>&emsp; · Implementar al menos dos proyecciones (isométrica y ortográfica) para visualizar el mapa en 3D.</li>
+            <li id="colores">Colores:<br>&emsp; · Asignar colores a las líneas según la altura de los puntos para mejorar la legibilidad visual.</li>
+            <li id="controles">Controles de usuario:<br>&emsp; · Permitir la interacción del usuario, como ajustar la altura o rotar los puntos.</li>
         </ol>
 
-      <a href="https://github.com/tonyvillegas91/42-cursus/tree/master/FdF" target="_blank">Ver
-          código</a>
+      <a href="https://github.com/tonyvillegas91/42-cursus/tree/master/FdF" target="_blank" id="codigo">Ver código</a>
   
       <div class="gifs-container">
           <img src="images/fdf1.gif" alt="GIF 1 del Proyecto FdF">
@@ -58,8 +61,8 @@
 </button>
 
 <footer>
-  <p>© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
-  <a href="index.html" class="volver-inicio">Volver a la página principal</a>
+  <p id="derechos">© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
+  <a href="index.html" class="volver-inicio" id="volver">Volver a la página principal</a>
 </footer>
 
   <script src="js/script.js"></script>

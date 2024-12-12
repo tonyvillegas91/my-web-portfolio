@@ -8,38 +8,41 @@
 </head>
 <body>
     <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Inicio</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="habilidades.html">Habilidades</a>
-        <a href="evaluacion-empresas.html">Mi Empresa Ideal</a>
-        <a href="game.html">Jugar al juego</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html" id="inicio_boton">Inicio</a>
+      <a href="proyectos.html" id="proyectos_boton">Proyectos</a>
+      <a href="habilidades.html" id="habilidades_boton">Habilidades</a>
+      <a href="evaluacion_empresas.html" id="empresa_boton">Mi Empresa Ideal</a>
+      <a href="game.html" id="juego_boton">Jugar un juego</a>
     </div>
 
     <!-- Botón de la hamburguesa -->
     <span id="menu-btn" class="menu-btn" onclick="openNav()">&#9776;</span>
 
     <header>
-        <h1>Proyecto cub3D</h1>
-        <p>Motor de raycasting para videojuegos</p>
+      <div class="botones-idioma"> 
+        <button onclick="cambiarIdioma('es')">ES</button>
+        <button onclick="cambiarIdioma('en')">EN</button>
+    </div>
+        <h1 id="titulo_cub3d">Proyecto cub3D</h1>
+        <p id="descripcion">Motor de raycasting para videojuegos</p>
     </header>
 
     <section id="proyecto1">
       <h2>cub3D</h2>
   
-      <h4>Descripción</h4>
-      <p>El proyecto cub3d de la Escuela 42 es la implementación de un motor gráfico sencillo que utiliza la biblioteca gráfica miniLibX para renderizar un entorno en perspectiva 3D basado en un formato de archivo de configuración. El proyecto incluye el uso de técnicas de raycasting para simular la perspectiva en primera persona.</p>
-          <h4>Objetivos</h4>
+      <h4 id="titulo_descripcion">Descripción</h4>
+      <p id="descripcion_42">El proyecto cub3d de la Escuela 42 es la implementación de un motor gráfico sencillo que utiliza la biblioteca gráfica miniLibX para renderizar un entorno en perspectiva 3D basado en un formato de archivo de configuración. El proyecto incluye el uso de técnicas de raycasting para simular la perspectiva en primera persona.</p>
+          <h4 id="objetivos">Objetivos</h4>
           <ol>
-            <li>Visualización 3D:<br>&emsp; · Implementar un motor gráfico para visualizar un entorno en perspectiva 3D.</li>
-            <li>Formateo de archivos de configuración:<br>&emsp; · Utilizar un archivo de configuración para definir la disposición del mapa, las texturas, los colores y otros elementos del entorno.</li>
-            <li>Teclado:<br>&emsp; · Permitir al usuario navegar por el entorno utilizando las teclas del teclado.</li>
-            <li>Técnicas de Raycasting:<br>&emsp; · Aplicar técnicas de proyección de rayos para calcular la representación tridimensional de la escena.</li>
-            <li>Detección de paredes:<br>&emsp; · Detectar colisiones con paredes y mostrar la proyección correcta.</li>
+            <li id="interfaz">Visualización 3D:<br>&emsp; · Implementar un motor gráfico para visualizar un entorno en perspectiva 3D.</li>
+            <li id="lectura">Formateo de archivos de configuración:<br>&emsp; · Utilizar un archivo de configuración para definir la disposición del mapa, las texturas, los colores y otros elementos del entorno.</li>
+            <li id="proyecciones">Teclado:<br>&emsp; · Permitir al usuario navegar por el entorno utilizando las teclas del teclado.</li>
+            <li id="colores">Técnicas de Raycasting:<br>&emsp; · Aplicar técnicas de proyección de rayos para calcular la representación tridimensional de la escena.</li>
+            <li id="controles">Detección de paredes:<br>&emsp; · Detectar colisiones con paredes y mostrar la proyección correcta.</li>
         </ol>
 
-      <a href="https://github.com/tonyvillegas91/42-cursus/tree/master/cub3d" target="_blank">Ver
-          código</a>
+      <a href="https://github.com/tonyvillegas91/42-cursus/tree/master/cub3d" target="_blank" id="codigo">Ver código</a>
   
       <div class="gifs-container">
           <img src="images/cub3d1.gif" alt="GIF 1 del Proyecto FdF">
@@ -52,8 +55,8 @@
 </button>
 
 <footer>
-  <p>© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
-  <a href="index.html" class="volver-inicio">Volver a la página principal</a>
+  <p id="derechos">© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
+  <a href="index.html" class="volver-inicio" id="volver">Volver a la página principal</a>
 </footer>
 
   <script src="js/script.js"></script>

@@ -9,46 +9,50 @@
 <body>
     <!-- Barra lateral y menú hamburguesa -->
     <div id="sidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Inicio</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="habilidades.html">Habilidades</a>
-        <a href="evaluacion-empresas.html">Mi Empresa Ideal</a>
-        <a href="game.html">Jugar al juego</a>
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html" id="inicio_boton">Inicio</a>
+      <a href="proyectos.html" id="proyectos_boton">Proyectos</a>
+      <a href="habilidades.html" id="habilidades_boton">Habilidades</a>
+      <a href="evaluacion_empresas.html" id="empresa_boton">Mi Empresa Ideal</a>
+      <a href="game.html" id="juego_boton">Jugar un juego</a>
     </div>
 
     <!-- Botón de la hamburguesa -->
     <span id="menu-btn" class="menu-btn" onclick="openNav()">&#9776;</span>
 
     <header>
-        <h1>Proyectos</h1>
-        <p>Estos son los proyectos que he estado realizando a lo largo de mi carrera</p>
+      <div class="botones-idioma"> 
+        <button onclick="cambiarIdioma('es')">ES</button>
+        <button onclick="cambiarIdioma('en')">EN</button>
+    </div>
+        <h1 id="titulo_proyectos">Proyectos</h1>
+        <p id="descripcion_proyectos">Estos son los proyectos que he estado realizando a lo largo de mi carrera</p>
     </header>
 
     <section id="proyectos-destacados">
-        <h2>Proyectos de 42</h2>
+        <h2 id="titulo_42">Proyectos de 42</h2>
         <ul>
           <li>
             <div class="proyecto">
-              <h3><a href="FdF.html">Proyecto FdF</a></h3>
+              <h3><a href="FdF.html" id="proyecto_fdf">Proyecto FdF</a></h3>
             </div>
           </li>
           <li>
             <div class="proyecto">
-              <h3><a href="minishell.html">Proyecto minishell</a></h3>
+              <h3><a href="minishell.html" id="proyecto_minishell">Proyecto minishell</a></h3>
             </div>
           </li>
           <li>
             <div class="proyecto">
-              <h3><a href="cub3d.html">Proyecto cub3D</a></h3>
+              <h3><a href="cub3d.html" id="proyecto_cub3d">Proyecto cub3D</a></h3>
             </div>
           </li>
           </ul>
       </section>
 
     <section id="proyectos" class="fade-in">
-        <h2>Proyectos destacados</h2>
-        <p>Aquí verás algunos de mis proyectos más interesantes.</p>
+        <h2 id="titulo_destacados">Proyectos destacados</h2>
+        <p id="descripcion_titulo_descatados">Aquí verás algunos de mis proyectos más interesantes.</p>
         <div id="repositorios"></div> <!-- Contenedor para los proyectos de GitHub -->
     </section>
 
@@ -59,10 +63,11 @@
     
 
     <footer>
-        <p>© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
-        <a href="index.html" class="volver-inicio">Volver a la página principal</a>
+        <p id="derechos">© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
+        <a href="index.html" class="volver-inicio" id="volver">Volver a la página principal</a>
     </footer>
 </body>
+
     <script src="js/script.js"></script>
     <script src="js/proyectos.js"></script>
 </html>
