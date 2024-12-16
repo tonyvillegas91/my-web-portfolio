@@ -243,10 +243,17 @@ footer {
 }
 
 /* Media query para tablets */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .menu-btn {
       font-size: 20px;
       padding: 8px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .menu-btn {
+      font-size: 30px; /* Ajusta el tamaño del icono */
+      padding: 8px;   /* Ajusta el padding */
     }
   }
 
@@ -563,4 +570,13 @@ nav.scrolled {
   
   .botones-idioma button:hover {
     background-color: #282c34; /* Color más oscuro al pasar el ratón */
+  }
+
+  /* Estilos para pantallas pequeñas (tablets y móviles) */
+@media (max-width: 768px) { 
+    .botones-idioma {
+      position: absolute;
+      top: 10px; /* Ajusta la posición vertical */
+      right: 10px; /* Ajusta la posición horizontal */
+    }
   }
