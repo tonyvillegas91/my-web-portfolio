@@ -2,7 +2,7 @@ const reposContainer = document.getElementById('repositorios');
 const username = 'tonyvillegas91'; // Reemplaza con tu usuario de GitHub
 
 // Lista de nombres de repositorios específicos que deseas mostrar
-const specificRepos = ['42-cursus', 'rick-and-morty-human-identifier', 'Prueba-Tecnica-React-Native', 'Proyectos_en_C'];
+const specificRepos = ['42-cursus', 'rick-and-morty-human-identifier', 'torneo-padel', 'Proyectos_en_C'];
 
 fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => response.json())

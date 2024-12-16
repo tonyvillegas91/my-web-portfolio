@@ -218,17 +218,18 @@ footer {
     top: 10px; /* Ajusta la posición desde la parte superior */
     left: 10px; /* Ajusta la posición desde el lado izquierdo */
     z-index: 11; /* Asegura que esté por encima de otros elementos */
-    font-size: 30px;
+    font-size: 2em;
     color: #333;
     cursor: pointer;
-    padding: 10px;
+    padding: 15px;
     background-color: #fff !important; 
     border: none !important;
     transition: transform 0.3s ease-in-out;
 }
 
 .menu-btn:hover {
-    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    /*transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .menu-btn.top {
@@ -239,6 +240,14 @@ footer {
 .menu-btn.scrolled {
     color: #333; /* El color que ya tienes definido para el scroll */
 }
+
+/* Media query para tablets */
+@media (min-width: 768px) {
+    .menu-btn {
+      font-size: 1.5em;
+      padding: 10px;
+    }
+  }
 
 
 /* Cuando se abre la barra lateral, el contenido se mueve a la derecha */
@@ -533,4 +542,24 @@ nav.scrolled {
   
   .volver-inicio:hover {
     color: #6d89c2; /* Color de fondo al pasar el ratón */
+  }
+
+  .botones-idioma {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+  }
+  
+  .botones-idioma button {
+    background-color: #4a4e69; /* Color similar al del header */
+    color: white;
+    border: none;
+    border-bottom: 2px solid white; /* Borde inferior blanco */
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  .botones-idioma button:hover {
+    background-color: #282c34; /* Color más oscuro al pasar el ratón */
   }
