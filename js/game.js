@@ -251,9 +251,9 @@ recordElement.textContent = "Récord: " + record;
 mostrarRanking();
 
 function ajustarCanvas() {
-    const tamañoDisponible = Math.min(window.innerWidth, window.innerHeight) - 20;
-    canvas.width = tamañoDisponible;
-    canvas.height = tamañoDisponible;
+    const tamañoDisponible = Math.min(window.innerWidth, window.innerHeight) - 40; // Reducido un poco el tamaño
+    canvas.width = tamañoDisponible * 0.9; // Ajustar para ser un poco más pequeño
+    canvas.height = tamañoDisponible * 0.9;
     anchoTablero = Math.floor(canvas.width / tamanoCelda);
     altoTablero = Math.floor(canvas.height / tamanoCelda);
 }
@@ -346,7 +346,11 @@ function manejarTecla(event) {
 }
 
 function manejarToque(event) {
-    if (!juegoEnCurso) iniciarJuego();
+    if (!juegoEnCurso) {
+        alert("¡Bienvenido al juego de la serpiente! Pulsa o toca la pantalla para comenzar.");
+        iniciarJuego();
+        return;
+    }
 
     const touch = event.changedTouches[0];
     const rect = canvas.getBoundingClientRect();
@@ -404,4 +408,9 @@ function mostrarRanking() {
 ajustarCanvas();
 canvas.addEventListener('touchstart', manejarToque);
 document.addEventListener('keydown', manejarTecla);
-iniciarJuego();
+window.addEventListener('resize', ajustarCanvas);
+
+// Prevenir el desplazamiento de la pantalla
+window.addEventListener('touchmove', (event) => {
+    event.preventDefault();
+}, { passive: false });
