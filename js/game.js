@@ -165,5 +165,50 @@ function mostrarRanking() {
     }
 }
 
+let touchStartX = 0;
+let touchStartY = 0;
+
+canvas.addEventListener('touchstart', function(event) {
+    const touch = event.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+});
+
+canvas.addEventListener('touchend', function(event) {
+    const touch = event.changedTouches[0];
+    const touchEndX = touch.clientX;
+    const touchEndY = touch.clientY;
+
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+
+    if (Math.abs(diffX) > Math.abs(diffY)) {
+        // Horizontal swipe
+        if (diffX > 0 && dx === 0) {
+            dx = 1; dy = 0; // Right
+        } else if (diffX < 0 && dx === 0) {
+            dx = -1; dy = 0; // Left
+        }
+    } else {
+        // Vertical swipe
+        if (diffY > 0 && dy === 0) {
+            dx = 0; dy = 1; // Down
+        } else if (diffY < 0 && dy === 0) {
+            dx = 0; dy = -1; // Up
+        }
+    }
+});
+
+function ajustarCanvas() {
+    canvas.width = window.innerWidth < 400 ? window.innerWidth - 20 : 400;
+    canvas.height = canvas.width; // Mantener un tablero cuadrado
+    anchoTablero = canvas.width / tamanoCelda;
+    altoTablero = canvas.height / tamanoCelda;
+}
+
+
 iniciarJuego();
 document.addEventListener('keydown', manejarTecla);
+
+window.addEventListener('resize', ajustarCanvas);
+ajustarCanvas();
