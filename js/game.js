@@ -174,6 +174,10 @@ canvas.addEventListener('touchstart', function(event) {
     touchStartY = touch.clientY;
 });
 
+canvas.addEventListener('touchmove', function(event) {
+    event.preventDefault(); // Prevenir scroll al hacer gestos
+});
+
 canvas.addEventListener('touchend', function(event) {
     const touch = event.changedTouches[0];
     const touchEndX = touch.clientX;
@@ -183,32 +187,38 @@ canvas.addEventListener('touchend', function(event) {
     const diffY = touchEndY - touchStartY;
 
     if (Math.abs(diffX) > Math.abs(diffY)) {
-        // Horizontal swipe
-        if (diffX > 0 && dx === 0) {
-            dx = 1; dy = 0; // Right
-        } else if (diffX < 0 && dx === 0) {
-            dx = -1; dy = 0; // Left
+        if (diffX > 50 && dx === 0) {
+            dx = 1; dy = 0; // Derecha
+        } else if (diffX < -50 && dx === 0) {
+            dx = -1; dy = 0; // Izquierda
         }
     } else {
-        // Vertical swipe
-        if (diffY > 0 && dy === 0) {
-            dx = 0; dy = 1; // Down
-        } else if (diffY < 0 && dy === 0) {
-            dx = 0; dy = -1; // Up
+        if (diffY > 50 && dy === 0) {
+            dx = 0; dy = 1; // Abajo
+        } else if (diffY < -50 && dy === 0) {
+            dx = 0; dy = -1; // Arriba
         }
     }
 });
 
 function ajustarCanvas() {
-    canvas.width = window.innerWidth < 400 ? window.innerWidth - 20 : 400;
-    canvas.height = canvas.width; // Mantener un tablero cuadrado
-    anchoTablero = canvas.width / tamanoCelda;
-    altoTablero = canvas.height / tamanoCelda;
+    const tamañoDisponible = Math.min(window.innerWidth, window.innerHeight) - 20;
+    canvas.width = tamañoDisponible;
+    canvas.height = tamañoDisponible;
+    anchoTablero = Math.floor(canvas.width / tamanoCelda);
+    altoTablero = Math.floor(canvas.height / tamanoCelda);
 }
+
+
+
+
 
 
 iniciarJuego();
 document.addEventListener('keydown', manejarTecla);
 
-window.addEventListener('resize', ajustarCanvas);
-ajustarCanvas();
+document.addEventListener('keydown', (event) => {
+    if (formularioRanking.style.display !== 'block') {
+        manejarTecla(event);
+    }
+});
