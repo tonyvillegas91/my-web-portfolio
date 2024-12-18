@@ -251,9 +251,9 @@ recordElement.textContent = "Récord: " + record;
 mostrarRanking();
 
 function ajustarCanvas() {
-    const tamañoDisponible = Math.min(window.innerWidth, window.innerHeight) - 60; // Ajuste reducido
-    canvas.width = tamañoDisponible * 0.9;
-    canvas.height = tamañoDisponible * 0.9;
+    const tamañoDisponible = Math.min(window.innerWidth, window.innerHeight) - 100; // Más pequeño para móviles
+    canvas.width = tamañoDisponible * 0.8;
+    canvas.height = tamañoDisponible * 0.8;
     anchoTablero = Math.floor(canvas.width / tamanoCelda);
     altoTablero = Math.floor(canvas.height / tamanoCelda);
 }
