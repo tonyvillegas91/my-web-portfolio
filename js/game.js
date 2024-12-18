@@ -251,8 +251,8 @@ recordElement.textContent = "Récord: " + record;
 mostrarRanking();
 
 function ajustarCanvas() {
-    const tamañoDisponible = Math.min(window.innerWidth, window.innerHeight) - 40; // Reducido un poco el tamaño
-    canvas.width = tamañoDisponible * 0.9; // Ajustar para ser un poco más pequeño
+    const tamañoDisponible = Math.min(window.innerWidth, window.innerHeight) - 40; // Ajuste reducido
+    canvas.width = tamañoDisponible * 0.9;
     canvas.height = tamañoDisponible * 0.9;
     anchoTablero = Math.floor(canvas.width / tamanoCelda);
     altoTablero = Math.floor(canvas.height / tamanoCelda);
@@ -326,6 +326,11 @@ function iniciarJuego() {
 }
 
 function manejarTecla(event) {
+    if (!juegoEnCurso) {
+        alert("¡Bienvenido al juego de la serpiente! Presiona una tecla de flecha o haz clic en el canvas para comenzar.");
+        iniciarJuego();
+    }
+
     if (formularioRanking.style.display === 'block') return;
 
     const IZQUIERDA = 37;
@@ -345,17 +350,24 @@ function manejarTecla(event) {
     }
 }
 
+function manejarClick() {
+    if (!juegoEnCurso) {
+        alert("¡Bienvenido al juego de la serpiente! Presiona una tecla de flecha o haz clic en el canvas para comenzar.");
+        iniciarJuego();
+    }
+}
+
 function manejarToque(event) {
+    const touch = event.changedTouches[0];
+    const rect = canvas.getBoundingClientRect();
+    const touchX = touch.clientX - rect.left;
+    const touchY = touch.clientY - rect.top;
+
     if (!juegoEnCurso) {
         alert("¡Bienvenido al juego de la serpiente! Pulsa o toca la pantalla para comenzar.");
         iniciarJuego();
         return;
     }
-
-    const touch = event.changedTouches[0];
-    const rect = canvas.getBoundingClientRect();
-    const touchX = touch.clientX - rect.left;
-    const touchY = touch.clientY - rect.top;
 
     const cabeza = serpiente[0];
     const cabezaX = cabeza.x * tamanoCelda;
@@ -407,10 +419,13 @@ function mostrarRanking() {
 
 ajustarCanvas();
 canvas.addEventListener('touchstart', manejarToque);
+canvas.addEventListener('click', manejarClick);
 document.addEventListener('keydown', manejarTecla);
 window.addEventListener('resize', ajustarCanvas);
 
 // Prevenir el desplazamiento de la pantalla
 window.addEventListener('touchmove', (event) => {
-    event.preventDefault();
+    if (event.target === canvas) {
+        event.preventDefault();
+    }
 }, { passive: false });
