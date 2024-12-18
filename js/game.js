@@ -251,7 +251,7 @@ recordElement.textContent = "Récord: " + record;
 mostrarRanking();
 
 function ajustarCanvas() {
-    const tamañoDisponible = Math.min(window.innerWidth, window.innerHeight) - 40; // Ajuste reducido
+    const tamañoDisponible = Math.min(window.innerWidth, window.innerHeight) - 60; // Ajuste reducido
     canvas.width = tamañoDisponible * 0.9;
     canvas.height = tamañoDisponible * 0.9;
     anchoTablero = Math.floor(canvas.width / tamanoCelda);
@@ -326,11 +326,6 @@ function iniciarJuego() {
 }
 
 function manejarTecla(event) {
-    if (!juegoEnCurso) {
-        alert("¡Bienvenido al juego de la serpiente! Presiona una tecla de flecha o haz clic en el canvas para comenzar.");
-        iniciarJuego();
-    }
-
     if (formularioRanking.style.display === 'block') return;
 
     const IZQUIERDA = 37;
@@ -353,6 +348,7 @@ function manejarTecla(event) {
 function manejarClick() {
     if (!juegoEnCurso) {
         alert("¡Bienvenido al juego de la serpiente! Presiona una tecla de flecha o haz clic en el canvas para comenzar.");
+        juegoEnCurso = true;
         iniciarJuego();
     }
 }
@@ -365,6 +361,7 @@ function manejarToque(event) {
 
     if (!juegoEnCurso) {
         alert("¡Bienvenido al juego de la serpiente! Pulsa o toca la pantalla para comenzar.");
+        juegoEnCurso = true;
         iniciarJuego();
         return;
     }
@@ -423,7 +420,13 @@ canvas.addEventListener('click', manejarClick);
 document.addEventListener('keydown', manejarTecla);
 window.addEventListener('resize', ajustarCanvas);
 
-// Prevenir el desplazamiento de la pantalla
+// Prevenir el desplazamiento de la pantalla en todos los eventos de control
+window.addEventListener('keydown', (event) => {
+    if ([37, 38, 39, 40].includes(event.keyCode)) {
+        event.preventDefault();
+    }
+}, { passive: false });
+
 window.addEventListener('touchmove', (event) => {
     if (event.target === canvas) {
         event.preventDefault();
