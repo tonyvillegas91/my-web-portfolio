@@ -9,17 +9,21 @@
 <body>
     <div id="sidebar" class="sidebar">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="index.html">Inicio</a>
-        <a href="proyectos.html">Proyectos</a>
-        <a href="habilidades.html">Habilidades</a>
-        <a href="evaluacion_empresas.html">Mi Empresa Ideal</a>
-        <a href="game.html">Jugar un juego</a>
+        <a href="index.html" id="inicio_boton">Inicio</a>
+        <a href="proyectos.html" id="proyectos_boton">Proyectos</a>
+        <a href="habilidades.html" id="habilidades_boton">Habilidades</a>
+        <a href="evaluacion_empresas.html" id="empresa_boton">Mi Empresa Ideal</a>
+        <a href="game.html" id="juego_boton">Jugar un juego</a>
     </div>
 
     <span id="menu-btn" class="menu-btn" onclick="openNav()">&#9776;</span>
 
     <header>
-        <h1>Juego de la Serpiente</h1>
+        <div class="botones-idioma"> 
+            <button onclick="cambiarIdioma('es')">ES</button>
+            <button onclick="cambiarIdioma('en')">EN</button>
+        </div>
+        <h1 id="titulo_juego">Juego de la Serpiente</h1>
     </header>
 
     <section id="juego" class="fade-in">
@@ -31,9 +35,9 @@
             <ol id="listaRanking"></ol>
         </div>
         <div id="formularioRanking">
-            <h3>Nuevo récord!</h3>
+            <h3 id="nuevo_record">Nuevo récord!</h3>
             <input type="text" id="nombreJugador" maxlength="3" placeholder="AAA">
-            <button onclick="guardarRecord()">Guardar</button>
+            <button onclick="guardarRecord()" id="save">Guardar</button>
         </div>
     </section>
 
@@ -42,8 +46,19 @@
     </button>
 
     <footer>
-        <p>© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
-        <a href="index.html" class="volver-inicio">Volver a la página principal</a>
+        <p id="derechos">© 2024 Tony Villegas Brea. Todos los derechos reservados.</p>
+        <a href="index.html" class="volver-inicio" id="volver">Volver a la página principal</a>
+        <div id="redes-sociales">
+            <a href="mailto:tony.villegas91@gmail.com" target="_blank">
+                <img src="images/email-icon.png" alt="Email">
+            </a>
+            <a href="https://www.linkedin.com/in/antoniovillegas91/" target="_blank">
+                <img src="images/linkedin-icon.png" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/tonyvillegas91" target="_blank">
+                <img src="images/github-icon.png" alt="GitHub">
+            </a>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>

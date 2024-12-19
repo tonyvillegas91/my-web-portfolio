@@ -114,6 +114,19 @@ traducciones = {
       volver: "Volver a la página principal",
 
 
+    },
+
+    game: {
+      titulo_juego: "Juego de la Serpiente",
+      puntuacion: "Puntuación",
+      record: "Récord",
+      nuevo_record: "¡Nuevo récord!",
+      save: "Guardar",
+
+      derechos: "© 2024 Tony Villegas Brea. Todos los derechos reservados.",
+      volver: "Volver a la página principal",
+      
+
     }
 
   };

@@ -294,7 +294,7 @@ function moverSerpiente() {
 
     if (cabeza.x === comidaX && cabeza.y === comidaY) {
         puntuacion++;
-        puntuacionElement.textContent = "Puntuación: " + puntuacion;
+        puntuacionElement.textContent = traducciones.game.puntuacion + ": " + puntuacion;
         generarComida();
     } else {
         serpiente.pop();
@@ -317,7 +317,7 @@ function iniciarJuego() {
     dx = 1;
     dy = 0;
     puntuacion = 0;
-    puntuacionElement.textContent = "Puntuación: " + puntuacion;
+    puntuacionElement.textContent = traducciones.game.puntuacion + ": " + puntuacion;
     generarComida();
     juegoEnCurso = true;
 

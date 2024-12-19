@@ -239,6 +239,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
       }
+
+      //game.html
+      if (document.getElementById('titulo_juego')) {
+        document.getElementById('titulo_juego').textContent = traducciones.game.titulo_juego;
+        document.getElementById('puntuacion').textContent = traducciones.game.puntuacion;
+        document.getElementById('record').textContent = traducciones.game.record;
+        document.getElementById('nuevo_record').textContent = traducciones.game.nuevo_record;
+        document.getElementById('save').textContent = traducciones.game.save;
+
+        document.getElementById('derechos').textContent = traducciones.game.derechos;
+        document.getElementById('volver').textContent = traducciones.game.volver;
+
+      }
     };
   
     document.head.appendChild(scriptTraduccion);

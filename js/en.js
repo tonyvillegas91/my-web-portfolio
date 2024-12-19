@@ -113,6 +113,19 @@ traducciones = {
       volver: "Back to home page",
 
 
+    },
+
+    game: {
+      titulo_juego: "Snake Game",
+      puntuacion: "Score",
+      record: "High Score",
+      nuevo_record: "New Record!",
+      save: "Save",
+
+      derechos: "© 2024 Tony Villegas Brea. All rights reserved.",
+      volver: "Back to home page",
+
+
     }
   
   };
