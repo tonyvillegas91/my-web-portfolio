@@ -618,7 +618,7 @@ nav.scrolled {
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) {
     #redes-sociales img {
         width: 25px; /* Tamaño aún más pequeño en móviles muy pequeños */
         height: 25px;
