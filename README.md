@@ -66,9 +66,9 @@ You can explore the portfolio here: [Tony Villegas Personal Web Portfolio](https
 ## 📬 **Contact**
 
 Feel free to reach out to me through:
-- **Email**: [your-email@example.com](mailto:tony.villegas91@gmail.com)
-- **LinkedIn**: [Tony Villegas LinkedIn](https://www.linkedin.com/in/antoniovillegas91/)
-- **GitHub**: [Tony Villegas GitHub](https://github.com/tonyvillegas91)
+- **Email**: [tony.villegas91@gmail.com](mailto:tony.villegas91@gmail.com)
+- **LinkedIn**: [Tony Villegas Brea LinkedIn](https://www.linkedin.com/in/antoniovillegas91/)
+- **GitHub**: [Tony Villegas  Brea GitHub](https://github.com/tonyvillegas91)
 
 ---
 
