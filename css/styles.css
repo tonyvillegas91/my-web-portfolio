@@ -603,9 +603,24 @@ nav.scrolled {
     width: 40px;
     height: 40px;
     filter: grayscale(100%) brightness(1.2) opacity(0.7);
-    transition: filter 0.3s ease;
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 #redes-sociales img:hover {
     filter: grayscale(0%) brightness(1) opacity(1);
+    transform: scale(1.2); /* Efecto de zoom al pasar el ratón */
+}
+
+@media (max-width: 768px) {
+    #redes-sociales img {
+        width: 30px; /* Reduce el tamaño en pantallas pequeñas */
+        height: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    #redes-sociales img {
+        width: 25px; /* Tamaño aún más pequeño en móviles muy pequeños */
+        height: 25px;
+    }
 }
