@@ -46,6 +46,7 @@ Welcome to my personal web portfolio! This project showcases my journey as a dev
 - **CSS**: Styling and responsiveness of the portfolio.
 - **JavaScript**: Interactive elements, game logic, and multilingual support.
 - **jQuery**: Simplified DOM manipulation and event handling.
+- **GitHub API**: Fetch and display my latest GitHub projects dynamically.
 
 ---
 
