@@ -12,7 +12,7 @@ traducciones = {
       trayectoria_texto3: "<strong>Student at Escuela 42 Madrid</strong> - Intensive programming and development training in an innovative school with no teachers and no schedule.",
       resumen_titulo: "My resume summary",
       resumen_texto: "Throughout my career, I have developed web development skills and worked on various projects. As an educator, I have cultivated leadership skills, patience, and adaptability to different levels and needs of students.",
-      derechos: "© 2024 Tony Villegas Brea. All rights reserved.",
+      derechos: "© 2025 Tony Villegas Brea. All rights reserved.",
       inicio_boton: "Home",
       proyectos_boton: "Projects",
       habilidades_boton: "Skills",
@@ -28,7 +28,7 @@ traducciones = {
       proyecto_cub3d: "cub3D Project",
       titulo_destacados: "Featured projects",
       descripcion_titulo_descatados: "Here you will find some of the most interesting projects I have worked on.",
-      derechos: "© 2024 Tony Villegas Brea. All rights reserved.",
+      derechos: "© 2025 Tony Villegas Brea. All rights reserved.",
       volver: "Back to home page",
       
       // ... traducciones para proyectos.html ...
@@ -46,7 +46,7 @@ traducciones = {
       colores: "Colors:<br>&emsp; · Assign colors to the lines according to the height of the points to improve visual readability.",
       controles: "User Controls:<br>&emsp; · Allow user interaction, such as adjusting the height or rotating the points.",
       codigo: "View code",
-      derechos: "© 2024 Tony Villegas Brea. All rights reserved.",
+      derechos: "© 2025 Tony Villegas Brea. All rights reserved.",
       volver: "Back to home page",
 
     },
@@ -63,7 +63,7 @@ traducciones = {
       colores: "Signal Handling:<br>&emsp; · Handle signals such as Ctrl+C and Ctrl+D.",
       controles: "Built-in Commands:<br>&emsp; · Implementation of basic shell built-in commands.",
       codigo: "View code",
-      derechos: "© 2024 Tony Villegas Brea. All rights reserved.",
+      derechos: "© 2025 Tony Villegas Brea. All rights reserved.",
       volver: "Back to home page"
 
     },
@@ -80,7 +80,7 @@ traducciones = {
       colores: "Raycasting Techniques:<br>&emsp; · Implement ray-casting techniques to compute the 3D representation of the scene.",
       controles: "Wall detection:<br>&emsp; · Detect collisions with walls and display the correct projection.",
       codigo: "View code",
-      derechos: "© 2024 Tony Villegas Brea. All rights reserved.",
+      derechos: "© 2025 Tony Villegas Brea. All rights reserved.",
       volver: "Back to home page",
 
     },
@@ -95,7 +95,7 @@ traducciones = {
       bases: "<strong>Databases:</strong> MongoDB",
       herramientas: "<strong>Tools:</strong> Git, Visual Studio Code, Bootstrap",
       idiomas: "<strong>Languages:</strong> Spanish, English",
-      derechos: "© 2024 Tony Villegas Brea. All rights reserved.",
+      derechos: "© 2025 Tony Villegas Brea. All rights reserved.",
       volver: "Back to home page",
       
     },
@@ -122,7 +122,7 @@ traducciones = {
       nuevo_record: "New Record!",
       save: "Save",
 
-      derechos: "© 2024 Tony Villegas Brea. All rights reserved.",
+      derechos: "© 2025 Tony Villegas Brea. All rights reserved.",
       volver: "Back to home page",
 
 

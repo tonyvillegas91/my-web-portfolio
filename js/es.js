@@ -13,7 +13,7 @@ traducciones = {
       trayectoria_texto3: "<strong>Estudiante en Escuela 42 Madrid</strong> - Formación intensiva en programación y desarrollo en una escuela innovadora sin profesores ni horarios.",
       resumen_titulo: "Resumen de mi Currículum",
       resumen_texto: "A lo largo de mi carrera, he desarrollado habilidades en el campo del desarrollo web y he trabajado en proyectos diversos. Como entrenador, he cultivado la capacidad de liderazgo, paciencia y adaptación a diferentes niveles y necesidades de los alumnos.",
-      derechos: "© 2024 Tony Villegas Brea. Todos los derechos reservados.",
+      derechos: "© 2025 Tony Villegas Brea. Todos los derechos reservados.",
       inicio_boton: "Inicio",
       proyectos_boton: "Proyectos",
       habilidades_boton: "Habilidades",
@@ -29,7 +29,7 @@ traducciones = {
       proyecto_cub3d: "Proyecto cub3D",
       titulo_destacados: "Proyectos destacados",
       descripcion_titulo_descatados : "Aquí verás algunos de mis proyectos más interesantes.",
-      derechos: "© 2024 Tony Villegas Brea. Todos los derechos reservados.",
+      derechos: "© 2025 Tony Villegas Brea. Todos los derechos reservados.",
       volver: "Volver a la página principal",
       // ... traducciones para proyectos.html ...
     },
@@ -46,7 +46,7 @@ traducciones = {
       colores: "Colores:<br>&emsp; · Asignar colores a las líneas según la altura de los puntos para mejorar la legibilidad visual.",
       controles: "Controles de usuario:<br>&emsp; · Permitir la interacción del usuario, como ajustar la altura o rotar los puntos.",
       codigo: "Ver código",
-      derechos: "© 2024 Tony Villegas Brea. Todos los derechos reservados.",
+      derechos: "© 2025 Tony Villegas Brea. Todos los derechos reservados.",
       volver: "Volver a la página principal",
 
     },
@@ -63,7 +63,7 @@ traducciones = {
       colores: "Familiarizarte con las llamadas al sistema:<br>&emsp; · Utilizar funciones de bajo nivel como fork, execve, wait, pipe, dup, etc. para interactuar con el kernel del sistema operativo.",
       controles: "Escribir código robusto y seguro:<br>&emsp; · Prestar atención a la gestión de errores, la prevención de fugas de memoria y la protección contra vulnerabilidades como inyecciones de comandos.",
       codigo: "Ver código",
-      derechos: "© 2024 Tony Villegas Brea. Todos los derechos reservados.",
+      derechos: "© 2025 Tony Villegas Brea. Todos los derechos reservados.",
       volver: "Volver a la página principal",
 
 
@@ -81,7 +81,7 @@ traducciones = {
       colores: "Técnicas de Raycasting:<br>&emsp; · Aplicar técnicas de proyección de rayos para calcular la representación tridimensional de la escena.",
       controles: "Detección de paredes:<br>&emsp; · Detectar colisiones con paredes y mostrar la proyección correcta.",
       codigo: "Ver código",
-      derechos: "© 2024 Tony Villegas Brea. Todos los derechos reservados.",
+      derechos: "© 2025 Tony Villegas Brea. Todos los derechos reservados.",
       volver: "Volver a la página principal",
 
     },
@@ -96,7 +96,7 @@ traducciones = {
       bases: "<strong>Bases de Datos:</strong> MongoDB",
       herramientas: "<strong>Herramientas:</strong> Git, Visual Studio Code, Bootstrap",
       idiomas: "<strong>Idiomas:</strong> Castellano, Inglés",
-      derechos: "© 2024 Tony Villegas Brea. Todos los derechos reservados.",
+      derechos: "© 2025 Tony Villegas Brea. Todos los derechos reservados.",
       volver: "Volver a la página principal",
 
     },
@@ -123,7 +123,7 @@ traducciones = {
       nuevo_record: "¡Nuevo récord!",
       save: "Guardar",
 
-      derechos: "© 2024 Tony Villegas Brea. Todos los derechos reservados.",
+      derechos: "© 2025 Tony Villegas Brea. Todos los derechos reservados.",
       volver: "Volver a la página principal",
       
 
