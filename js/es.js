@@ -110,7 +110,7 @@ traducciones = {
       ambiente: "<strong>Ambiente Colaborativo:</strong> Creo en la importancia del trabajo en equipo y la comunicación abierta.",
       oportunidades: "<strong>Oportunidades de Crecimiento:</strong> Valoro empresas que invierten en el desarrollo profesional de sus empleados.",
       impacto: "<strong>Impacto:</strong> Prefiero proyectos que tengan un impacto positivo en la sociedad y el medio ambiente.",
-      derechos: "© 2024 Tony Villegas Brea. Todos los derechos reservados.",
+      derechos: "© 2025 Tony Villegas Brea. Todos los derechos reservados.",
       volver: "Volver a la página principal",
 
 

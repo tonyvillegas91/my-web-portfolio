@@ -109,7 +109,7 @@ traducciones = {
       ambiente: "<strong>Collaborative environment:</strong> I am a firm believer in the importance of teamwork and open communication.",
       oportunidades: "<strong>Opportunities for growth:</strong> I appreciate companies that invest in the professional development of their employees.",
       impacto: "<strong>Impact:</strong> My preference is for projects that have a positive impact on society and the environment.",
-      derechos: "© 2024 Tony Villegas Brea. All rights reserved.",
+      derechos: "© 2025 Tony Villegas Brea. All rights reserved.",
       volver: "Back to home page",
 
 
