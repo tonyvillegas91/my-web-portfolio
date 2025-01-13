@@ -602,13 +602,15 @@ nav.scrolled {
 #redes-sociales img {
     width: 40px;
     height: 40px;
-    filter: grayscale(100%) brightness(1.2) opacity(0.7);
-    transition: filter 0.3s ease, transform 0.3s ease;
+    filter: brightness(0) invert(0.7); /* Color más claro, casi blanco */
+    opacity: 0.8;
+    transition: filter 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
 }
 
 #redes-sociales img:hover {
-    filter: grayscale(0%) brightness(1) opacity(1);
-    transform: scale(1.2); /* Efecto de zoom al pasar el ratón */
+    filter: brightness(0.9) invert(1); /* Vuelve a su color original */
+    opacity: 1;
+    transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
